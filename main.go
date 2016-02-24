@@ -56,6 +56,11 @@ func main() {
 	if !ok {
 		log.Fatalf("Could not find selected backend \"%s\"", *selectedBackend)
 	}
+	
+	if *location == "capetown" {
+		log.Fatalf("Damn you, California! Get your own names!")
+	}
+	
 	r := be.Fetch(*location, *numdays)
 
 	// set unit system
